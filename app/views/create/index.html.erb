@@ -1,0 +1,30 @@
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.26.0/slimselect.min.css" rel="stylesheet"></link>
+
+<html>
+  <body>
+
+<%= form_with(url: "CreateContact", method: "post") do %>
+  <%= label_tag(:name, "Name:") %>
+  <%= text_field_tag(:name) %>
+  <br/>
+  <br/>
+    <%= label_tag(:pnumber, "Phone number:") %>
+  <%= text_field_tag :pnumber %>
+    <br/>
+  <br/>
+    <%= label_tag(:email, "Email:") %>
+  <%= text_field_tag :email  %>
+    <br/>
+  <br/>
+    <%= label_tag(:interest, "Interest:") %>
+    <%= select_tag :interest, raw('<option value="science fiction">Science Fiction</option><option value="comedie">Comedie</option><option value="Drame">Drame</option>') %>
+  <br/>
+  <br/>
+  <%= submit_tag("Search") %>
+<% end %>
+    
+
+  </body>
+</html>

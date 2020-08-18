@@ -1,0 +1,27 @@
+<form method="post" action="CreateContact">
+
+    <label>Name</label>
+    <input name="name" type="text" />
+    <br /> <br />
+
+    <label>Phone Number</label>
+    <input name="pnumber""></textarea>
+    <br /> <br />
+
+    <label>Email</label>
+    <input name="email" type="text" />
+    <br /> <br />
+
+   <select name="interest" id="pet-select">
+  <option value="science fiction">Science fiction</option>
+  <option value="comedie">Comedie</option>
+  <option value="drame">Drame</option>
+  </select>
+    <br /> <br />
+    
+    <input type="hidden" 
+     value="<%= form_authenticity_token() %>" 
+     name="authenticity_token"/>
+
+    <input type="submit" value="Register" />
+  </form>
